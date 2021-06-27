@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration Form</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			color: blue;
+		}
+		form{
+			background-color: pink;
+			text-align: center;
+		}
+		input{
+			padding: 12px 20px;
+  			margin: 8px 0;
+  			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body style="background-color: yellow;">
+	<h1>Student Registration Form</h1>
+	<form method="POST">
+		{% csrf_token %}
+		<label>FisrtName :</label>
+		<input type="text" name="fname"></br></br>
+		<label>LastName :</label>
+		<input type="text" name="lname"></br></br>
+		<label>EmailId :</label>
+		<input type="email" name="email"></br></br>
+		<label>Gender :</label>
+		<input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="Female">Female  </br>
+		<label>Adress :</label>
+		<input type="textarea" name="address"></br></br>
+		<label>Language :</label>
+		<input type="checkbox" name="lang" value="Python">Python
+		<input type="checkbox" name="lang" value="Java">Java
+		<input type="checkbox" name="lang" value="Django">Django
+		<input type="submit" name="submit">
+
+	</form>
+
+</body>
+</html>
